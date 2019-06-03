@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+  <link href="style.css" rel="stylesheet"></head>
+  <body>
+    <header>
+      <section class="header">
+        <div class="header__logo"><a href="index.html"><img src="images/Logo.png" alt="TOXIN"></a></div>
+        <div class="header__nav">
+          <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Вакансии</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Соглашения</a></li>
+          </ul>
+        </div>
+        <div class="header__buttons"><a class="header__buttons entry" href="#">Войти</a><a class="header__buttons reg" href="#">Зарегистрироваться</a></div>
+      </section>
+    </header>
+    <section class="rooms">
+      <div class="rooms_settings">
+        <p class="filter_date">даты пребывания в отеле</p>
+        <input id="date" type="text" placeholder="19 авг - 23 авг">
+        <p class="filter_date">гости</p>
+        <select class="filter_count">
+          <option selected>Сколько гостей</option>
+          <option>Взрослые</option>
+          <option>Дети</option>
+          <option>Младенцы</option>
+        </select>
+        <div class="rooms_settings_price"><span class="filter_date">диапазон цены</span>
+          <div class="rooms_settings_price_count"><span id="price1">5 000 </span><span id="price2"> 10 000</span></div>
+        </div>
+        <input id="dev" type="range" value="0">
+        <p id="price_day">Стоимость за сутки пребывания в номере</p>
+        <p class="filter_date">Checkbox Buttons
+          <div class="filter_date_checkbox">
+            <div>
+              <input class="checkbox" type="checkbox">
+              <input class="checkbox" type="checkbox" checked="checked">
+              <input class="checkbox" type="checkbox" checked="checked">
+            </div>
+            <div>
+              <ul>
+                <li>Можно курить</li>
+                <li>Можно c питомцами</li>
+                <li>Можно пригласить гостей (до 10 человек)      </li>
+              </ul>
+            </div>
+          </div>
+        </p>
+        <p class="filter_date">доступность
+          <div class="filter_date_corridor">
+            <div>
+              <input class="checkbox" type="checkbox">
+              <input class="checkbox" type="checkbox">
+            </div>
+            <div>
+              <ul>
+                <il class="bold">Широкий коридор</il>
+                <il class="moserrat">Ширина коридоров в номере не менее 91 см.</il>
+                <il class="bold">Помощник для инвалидов</il>
+                <il class="moserrat">На 1 этаже вас встретит специалист  и проводит до номера.</il>
+              </ul>
+            </div>
+          </div>
+        </p>
+        <p class="filter_date">Удобство номера</p>
+        <select class="filter_count">
+          <option selected>Кровати</option>
+          <option>Спальни</option>
+          <option>Кровати</option>
+          <option>Ванные комнаты</option>
+        </select>
+        <p class="filter_date">дополнительные удобства</p>
+      </div>
+      <div class="rooms_variables">
+        <p>Номера, которые мы для вас подобрали</p>
+            <div class="rooms_variables_item"><img src="images/main.png" alt="luxe" width="270px">
+              <div class="rooms_variables_item_text">
+                <div class="rooms_variables_item_text_number"><span class="number">№ 888</span><span class="luxe"> люкс</span></div>
+                <div class="rooms_variables_item_text_price"><span class="price">9 990</span> в сутки</div>
+              </div>
+              <div class="rooms_variables_item_rating">
+                <div class="rooms_variables_item_rating_stars"></div>
+                <div class="rooms_variables_item_rating_comment"><span class="comment"> <b>145</b> отзывов</span></div>
+              </div>
+            </div>
+            <div class="rooms_variables_item"><img src="images/main1.png" alt="luxe" width="270px">
+              <div class="rooms_variables_item_text">
+                <div class="rooms_variables_item_text_number"><span class="number">№ 840</span><span class="luxe"></span></div>
+                <div class="rooms_variables_item_text_price"><span class="price">9 990</span> в сутки</div>
+              </div>
+              <div class="rooms_variables_item_rating">
+                <div class="rooms_variables_item_rating_stars"></div>
+                <div class="rooms_variables_item_rating_comment"><span class="comment"> <b>65</b> отзывов</span></div>
+              </div>
+            </div>
+            <div class="rooms_variables_item"><img src="images/main2.png" alt="luxe" width="270px">
+              <div class="rooms_variables_item_text">
+                <div class="rooms_variables_item_text_number"><span class="number">№ 980</span><span class="luxe"></span></div>
+                <div class="rooms_variables_item_text_price"><span class="price">8 500</span> в сутки</div>
+              </div>
+              <div class="rooms_variables_item_rating">
+                <div class="rooms_variables_item_rating_stars"></div>
+                <div class="rooms_variables_item_rating_comment"><span class="comment"> <b>35</b> отзывов</span></div>
+              </div>
+            </div>
+            <div class="rooms_variables_item"><img src="images/main3.png" alt="luxe" width="270px">
+              <div class="rooms_variables_item_text">
+                <div class="rooms_variables_item_text_number"><span class="number">№ 856</span><span class="luxe"></span></div>
+                <div class="rooms_variables_item_text_price"><span class="price">7 300</span> в сутки</div>
+              </div>
+              <div class="rooms_variables_item_rating">
+                <div class="rooms_variables_item_rating_stars"></div>
+                <div class="rooms_variables_item_rating_comment"><span class="comment"> <b>19</b> отзывов</span></div>
+              </div>
+            </div>
+            <div class="rooms_variables_item"><img src="images/main4.png" alt="luxe" width="270px">
+              <div class="rooms_variables_item_text">
+                <div class="rooms_variables_item_text_number"><span class="number">№ 740</span><span class="luxe"></span></div>
+                <div class="rooms_variables_item_text_price"><span class="price">6 000</span> в сутки</div>
+              </div>
+              <div class="rooms_variables_item_rating">
+                <div class="rooms_variables_item_rating_stars"></div>
+                <div class="rooms_variables_item_rating_comment"><span class="comment"> <b>44</b> отзывов</span></div>
+              </div>
+            </div>
+            <div class="rooms_variables_item"><img src="images/main5.png" alt="luxe" width="270px">
+              <div class="rooms_variables_item_text">
+                <div class="rooms_variables_item_text_number"><span class="number">№ 982</span><span class="luxe"></span></div>
+                <div class="rooms_variables_item_text_price"><span class="price">5 800</span> в сутки</div>
+              </div>
+              <div class="rooms_variables_item_rating">
+                <div class="rooms_variables_item_rating_stars"></div>
+                <div class="rooms_variables_item_rating_comment"><span class="comment"> <b>56</b> отзывов</span></div>
+              </div>
+            </div>
+            <div class="rooms_variables_item"><img src="images/main6.png" alt="luxe" width="270px">
+              <div class="rooms_variables_item_text">
+                <div class="rooms_variables_item_text_number"><span class="number">№ 678</span><span class="luxe"></span></div>
+                <div class="rooms_variables_item_text_price"><span class="price">5 500</span> в сутки</div>
+              </div>
+              <div class="rooms_variables_item_rating">
+                <div class="rooms_variables_item_rating_stars"></div>
+                <div class="rooms_variables_item_rating_comment"><span class="comment"> <b>45</b> отзывов</span></div>
+              </div>
+            </div>
+            <div class="rooms_variables_item"><img src="images/main7.png" alt="luxe" width="270px">
+              <div class="rooms_variables_item_text">
+                <div class="rooms_variables_item_text_number"><span class="number">№ 450</span><span class="luxe"></span></div>
+                <div class="rooms_variables_item_text_price"><span class="price">5 300</span> в сутки</div>
+              </div>
+              <div class="rooms_variables_item_rating">
+                <div class="rooms_variables_item_rating_stars"></div>
+                <div class="rooms_variables_item_rating_comment"><span class="comment"> <b>39</b> отзывов</span></div>
+              </div>
+            </div>
+            <div class="rooms_variables_item"><img src="images/main8.png" alt="luxe" width="270px">
+              <div class="rooms_variables_item_text">
+                <div class="rooms_variables_item_text_number"><span class="number">№ 350</span><span class="luxe"></span></div>
+                <div class="rooms_variables_item_text_price"><span class="price">5 000</span> в сутки</div>
+              </div>
+              <div class="rooms_variables_item_rating">
+                <div class="rooms_variables_item_rating_stars"></div>
+                <div class="rooms_variables_item_rating_comment"><span class="comment"> <b>77</b> отзывов</span></div>
+              </div>
+            </div>
+            <div class="rooms_variables_item"><img src="images/main9.png" alt="luxe" width="270px">
+              <div class="rooms_variables_item_text">
+                <div class="rooms_variables_item_text_number"><span class="number">№ 666</span><span class="luxe"></span></div>
+                <div class="rooms_variables_item_text_price"><span class="price">5 000</span> в сутки</div>
+              </div>
+              <div class="rooms_variables_item_rating">
+                <div class="rooms_variables_item_rating_stars"></div>
+                <div class="rooms_variables_item_rating_comment"><span class="comment"> <b>25</b> отзывов</span></div>
+              </div>
+            </div>
+            <div class="rooms_variables_item"><img src="images/main10.png" alt="luxe" width="270px">
+              <div class="rooms_variables_item_text">
+                <div class="rooms_variables_item_text_number"><span class="number">№ 444</span><span class="luxe"></span></div>
+                <div class="rooms_variables_item_text_price"><span class="price">5 000</span> в сутки</div>
+              </div>
+              <div class="rooms_variables_item_rating">
+                <div class="rooms_variables_item_rating_stars"></div>
+                <div class="rooms_variables_item_rating_comment"><span class="comment"> <b>15</b> отзывов</span></div>
+              </div>
+            </div>
+            <div class="rooms_variables_item"><img src="images/main11.png" alt="luxe" width="270px">
+              <div class="rooms_variables_item_text">
+                <div class="rooms_variables_item_text_number"><span class="number">№ 352</span><span class="luxe"></span></div>
+                <div class="rooms_variables_item_text_price"><span class="price">5 000</span> в сутки</div>
+              </div>
+              <div class="rooms_variables_item_rating">
+                <div class="rooms_variables_item_rating_stars"></div>
+                <div class="rooms_variables_item_rating_comment"><span class="comment"> <b>55</b> отзывов</span></div>
+              </div>
+            </div>
+      </div>
+    </section>
+    <section class="info">
+      <div class="info__main">
+        <div class="info__main__logo"><img src="images/Logo.png" alt="TOXIN">
+          <p>Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»</p>
+        </div>
+        <div class="info__main__nav">
+          <p class="names">Навигация</p>
+          <ul>
+            <li><a>О нас</a></li>
+            <li><a>Новости</a></li>
+            <li><a>Служба поддержки</a></li>
+            <li><a>Услуги</a></li>
+          </ul>
+        </div>
+        <div class="info__main__about">
+          <p class="names">О нас</p>
+          <ul>
+            <li><a>О сервисе</a></li>
+            <li><a>Наша команда</a></li>
+            <li><a>Вакансии</a></li>
+            <li><a>Инвесторы</a></li>
+          </ul>
+        </div>
+        <div class="info__main__help">
+          <p class="names">Служба поддержки</p>
+          <ul>
+            <li><a>Соглашения</a></li>
+            <li><a>Сообщества</a></li>
+            <li><a>Связь с нами</a></li>
+          </ul>
+        </div>
+        <div class="info__main__descript">
+          <p class="names">Подписка</p><span>Получайте специальные предложения и новости сервиса</span>
+          <input class="email" type="text" size="35" placeholder="Email">
+        </div>
+      </div>
+    </section>
+    <footer>
+      <section class="footer"><a href="">Copyright © 2018 Toxin отель. Все права зачищены.</a>
+        <div class="footer__icons"><img src="images/twitter.png" alt="twitter"><img src="images/facebook.png" alt="facebook"><img src="images/instagram.png" alt="instagram"></div>
+      </section>
+    </footer>
+  <script type="text/javascript" src="bundle.js"></script></body>
+</html>
