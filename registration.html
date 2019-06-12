@@ -23,32 +23,43 @@
         </div>
       </section>
     </header>
-    <section class="main-page"><img src="images/image3.png" alt="">
-      <section class="wrapper main-page__wrapper">
-        <div class="position">
-          <div class="search-form">
-            <p class="title search-form__title">Найдём номера под<br>ваши пожелания</p>
-            <div class="arrival search-form__arrival"><span class="search-form__text headline">прибытие</span>
-              <form class="search-form__form" action="#">
-                <input class="datepicker-here input input_width_150px" type="text" placeholder="ДД.ММ.ГГГГ" data-range="true" data-multiple-dates-separator=" - "><a href="#"><i class="fas fa-chevron-down fas_posa"></i></a>
-              </form>
-            </div>
-            <div class="departure search-form__departure"><span class="search-form__text headline">выезд</span>
-              <form class="search-form__form" action="#">
-                <input class=" input input_width_150px" type="text" placeholder="ДД.ММ.ГГГГ"><a href="#"><i class="fas fa-chevron-down fas_posa"></i></a>
-              </form>
-            </div>
-            <div class="guest search-form__guest"><span class="search-form__text headline">гости</span>
-              <form class="search-form__form" action="#">
-                <input class="input input_width_320px" type="text" placeholder="Сколько гостей"><a href="#"><i class="fas fa-chevron-down fas_posa"></i></a>
-              </form>
-            </div>
-            <div class="search-form__btn"><a class="button search-form__button" href="#">подобрать номер<i class="fas fa-arrow-right search-form__fas"></i></a></div>
+    <div class="background"><img class="reg-img" src="images/image 4.1.png" alt="background">
+      <section class="wrapper">
+        <div class="main-form">
+          <div class="title">Регистрация аккаунта</div>
+          <div class="main-form__name">
+            <input class="input input_width_320px" type="text" placeholder="Имя">
+            <input class="input input_width_320px" type="text" placeholder="Фамилия">
           </div>
-          <div class="slogan text_textstyle">Лучшие номера для вашей работы, отдыха и просто вдохновения</div>
+          <div class="main-form__radio-button">
+            <div class="position-abs">
+              <input class="main-form__radio" type="radio" name="sex" id="radio1">
+              <label class="main-form__label" for="radio1">Мужчина</label>
+            </div>
+            <div class="position-abs">
+              <input class="main-form__radio" type="radio" name="sex" id="radio2">
+              <label class="main-form__label" for="radio2">Женщина</label>
+            </div>
+          </div>
+          <div class="main-form__birt-date"><span class="headline">Дата рождения</span>
+            <input class="datepicker-here input input_width_320px" type="text" placeholder="ДД.MM.ГГГГ">
+          </div>
+          <div class="main-form__data"><span class="headline">данные для входа в сервис</span>
+            <input class="input input_width_320px" type="text" placeholder="Email">
+            <input class="input input_width_320px input_mt10" type="text" placeholder="Пароль">
+          </div>
+          <div class="main-form__switch">
+            <div class="tgSwitch">
+              <div class="slider"></div>
+              <input type="checkbox" name="switch" id="one">
+            </div>
+            <label class="slider_text" for="one">Получать спецпредложения</label>
+          </div>
+          <div class="main-form__pay"><a class="button main-form__button" href="#">Перейти к оплате<i class="fas fa-arrow-right search-form__fas"></i></a></div>
+          <div class="main-form__else"><span class="main-form__text">Уже есть аккаунт на Toxin</span><a class="button button__entry" href="entry.html">Войти</a></div>
         </div>
       </section>
-    </section>
+    </div>
     <section class="wrapper">
       <div class="navigation-bottom__wrapper">
         <div class="info wrapper__info"><a class="info__logo" href="index.html"><img class="info__img" src="images/Logo.png" alt="TOXIN"></a>
