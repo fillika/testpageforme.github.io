@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title></title>
   <link href="style.css" rel="stylesheet"></head>
   <body>
@@ -50,31 +51,31 @@
         </div>
         <div class="search-form__price">
           <div class="search-form__total-days"><span class="search-form__cost">9 990₽ х 4 суток</span><span>39 960₽</span></div>
-          <div class="search-form__total-discount"><span class="search-form__cost">Сбор за услуги: скидка 2 179₽</span><span>0₽</span></div>
-          <div class="search-form__total-extra-services"><span class="search-form__cost">Сбор за дополнительные услуги</span><span>300₽</span></div>
+          <div class="search-form__total-discount"><span class="search-form__cost search-form__cost_after">Сбор за услуги: скидка 2 179₽</span><span>0₽</span></div>
+          <div class="search-form__total-extra-services"><span class="search-form__cost search-form__cost_after">Сбор за дополнительные услуги</span><span>300₽</span></div>
         </div>
-        <div class="search-form__total"><span>Итого</span><span>38 081₽</span></div>
+        <div class="search-form__total"><span class="search-form__total_letter_spacing ">Итого</span><span>38 081₽</span></div>
         <div class="search-form__btn"><a class="button search-form__button_room-details" href="#">забронировать<i class="fas fa-arrow-right search-form__fas"></i></a></div>
       </div>
       <div class="main-reviews main-reviews_margin_top_70">
-        <div class="details">
+        <section class="details details_margins">
           <h2 class="h2">Сведения о номере</h2>
-          <div class="details__text"><i class="far fa-grin"></i>
+          <div class="details__text"><i class="material-icons material-icons_font-size_xl"> mood </i>
             <div class="details__text_margin_left">
               <p class="headline_details">Комфорт</p><span>Шумопоглощающие стены</span>
             </div>
           </div>
-          <div class="details__text details__text_border"><i class="fas fa-building"></i>
+          <div class="details__text details__text_border"><i class="material-icons material-icons_font-size_xl"> location_city </i>
             <div class="details__text_margin_left">
               <p class="headline_details">Удобство</p><span>Окно в каждой из спален</span>
             </div>
           </div>
-          <div class="details__text"><i class="fas fa-fire"></i>
+          <div class="details__text"><i class="material-icons material-icons_font-size_xl"> whatshot </i>
             <div class="details__text_margin_left">
               <p class="headline_details">Уют</p><span>Номер оснащен камином</span>
             </div>
           </div>
-        </div>
+        </section>
         <div class="impressions">
           <h2 class="h2">Впечатления от номера</h2>
           <div class="statistic statistic_margin_top"><img class="impressions__img" src="images/Ellipse.png" alt="statistic">
@@ -93,15 +94,17 @@
               <div class="reviews__heart reviews__heart_violet"><i class="fas fa-heart"></i><span>12</span></div>
             </div>
             <div class="reviews__about">
-              <p class="headline_details">Мурад Сарафанов</p><span class="reviews__date">5 дней назад</span><br><span class="revies__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</span>
+              <p class="headline_details">Мурад Сарафанов</p>
+              <div class="reviews__date">5 дней назад</div><span class="reviews__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</span>
             </div>
           </div>
           <div class="patricia patricia_margin_top">
             <div class="reviews__photo"><img src="images/patri.png" alt="">
-              <div class="reviews__heart"><i class="far fa-heart"></i><span>2</span></div>
+              <div class="reviews__heart"><i class="far fa-heart"></i><span>  2</span></div>
             </div>
             <div class="reviews__about">
-              <p class="headline_details">Патрисия Стёклышкова</p><span class="reviews__date">Неделю назад</span><br><span class="revies__text">Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент</span>
+              <p class="headline_details">Патрисия Стёклышкова</p>
+              <div class="reviews__date">Неделю назад</div><span class="reviews__text">Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент</span>
             </div>
           </div>
         </div>
@@ -111,11 +114,11 @@
             <ul class="other__list">
               <li class="other__item other__item_one">Нельзя с питомцами</li>
               <li class="other__item other__item_two">Без вечеринок и мероприятий</li>
-              <li class="other__item other__item_three">Время прибытия — после 13:00, а выезд до 12:00</li>
+              <li class="other__item other__item_three">Время прибытия — после 13:00, <br>а выезд до 12:00</li>
             </ul>
           </div>
           <div class="cancel">
-            <h2 class="h2 h2__other">Отмена</h2><span>Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.</span>
+            <h2 class="h2 h2__other h2__other-cancel">Отмена</h2><span>Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.</span>
           </div>
         </section>
       </div>

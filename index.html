@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title></title>
   <link href="style.css" rel="stylesheet"></head>
   <body>
@@ -40,7 +41,19 @@
             </div>
             <div class="guest search-form__guest"><span class="search-form__text headline">гости</span>
               <form class="search-form__form" action="#">
-                <input class="input input_width_320px" type="text" placeholder="Сколько гостей"><a href="#"><i class="fas fa-chevron-down fas_posa"></i></a>
+                <div class="dropdown" data-dropdown="open">
+                  <input class="input dropdown-header input_width_320px" type="text" placeholder="Сколько гостей">
+                  <div class="dropdown-body dropdown-body__landing">
+                    <div class="dropdown__name dropdown__name__search-form">Взрослые<span class="number"><span class="minus">-</span>
+                        <input class="dropdown__input" type="text" placeholder="0" value="0"><span class="plus">+</span></span></div>
+                    <div class="dropdown__name dropdown__name__search-form">Дети<span class="number"><span class="minus">-</span>
+                        <input class="dropdown__input" type="text" placeholder="0" value="0"><span class="plus">+</span></span></div>
+                    <div class="dropdown__name dropdown__name__search-form">Младенцы<span class="number"><span class="minus">-</span>
+                        <input class="dropdown__input" type="text" placeholder="0" value="0"><span class="plus">+</span></span></div>
+                    <button class="reset">Очистить </button>
+                    <button class="complete">Применить </button>
+                  </div>
+                </div><a href="#"><i class="fas fa-chevron-down fas_posa"></i></a>
               </form>
             </div>
             <div class="search-form__btn"><a class="button search-form__button" href="room_details.html">подобрать номер<i class="fas fa-arrow-right search-form__fas"></i></a></div>
