@@ -26,29 +26,29 @@
     </header>
     <section class="main-page"><img src="images/image3.png" alt="">
       <section class="wrapper main-page__wrapper">
-        <div class="position">
+        <div class="position-relative">
           <div class="search-form search-form_landing">
             <p class="title search-form__title">Найдём номера под<br>ваши пожелания</p>
-            <div class="arrival search-form__arrival"><span class="search-form__text headline">прибытие</span>
+            <div class="arrival arrival_width150"><span class="search-form__text headline">прибытие</span>
               <form class="search-form__form" action="#">
                 <input class="datepicker-here input input_width_150px" type="text" placeholder="ДД.ММ.ГГГГ" data-range="true" data-multiple-dates-separator=" - "><a href="#"><i class="fas fa-chevron-down fas_posa"></i></a>
               </form>
             </div>
-            <div class="departure search-form__departure"><span class="search-form__text headline">выезд</span>
+            <div class="departure departure_width150"><span class="search-form__text headline">выезд</span>
               <form class="search-form__form" action="#">
                 <input class=" input input_width_150px" type="text" placeholder="ДД.ММ.ГГГГ"><a href="#"><i class="fas fa-chevron-down fas_posa"></i></a>
               </form>
             </div>
-            <div class="guest search-form__guest"><span class="search-form__text headline">гости</span>
-              <form class="search-form__form" action="#">
-                <div class="dropdown" data-dropdown="open">
+            <div class="guest guest_indents"><span class="search-form__text headline">гости</span>
+              <form class="search-form__form" action="#" onsubmit="return false">
+                <div class="dropdown dropdown_width320" data-dropdown="open">
                   <input class="input dropdown-header input_width_320px" type="text" placeholder="Сколько гостей">
-                  <div class="dropdown-body dropdown-body__landing">
-                    <div class="dropdown__name dropdown__name__search-form">Взрослые<span class="number"><span class="minus">-</span>
+                  <div class="dropdown-body dropdown-body_width320 dropdown-body_common-style">
+                    <div class="dropdown__name dropdown__name_styles-for-guest_input">Взрослые<span class="number"><span class="minus">-</span>
                         <input class="dropdown__input" type="text" placeholder="0" value="0"><span class="plus">+</span></span></div>
-                    <div class="dropdown__name dropdown__name__search-form">Дети<span class="number"><span class="minus">-</span>
+                    <div class="dropdown__name dropdown__name_styles-for-guest_input">Дети<span class="number"><span class="minus">-</span>
                         <input class="dropdown__input" type="text" placeholder="0" value="0"><span class="plus">+</span></span></div>
-                    <div class="dropdown__name dropdown__name__search-form">Младенцы<span class="number"><span class="minus">-</span>
+                    <div class="dropdown__name dropdown__name_styles-for-guest_input">Младенцы<span class="number"><span class="minus">-</span>
                         <input class="dropdown__input" type="text" placeholder="0" value="0"><span class="plus">+</span></span></div>
                     <button class="reset">Очистить </button>
                     <button class="complete">Применить </button>
@@ -56,7 +56,7 @@
                 </div><a href="#"><i class="fas fa-chevron-down fas_posa"></i></a>
               </form>
             </div>
-            <div class="search-form__btn"><a class="button search-form__button" href="room_details.html">подобрать номер<i class="fas fa-arrow-right search-form__fas"></i></a></div>
+            <div><a class="button button__choose-a-number" href="room_variables.html">подобрать номер<i class="fas fa-arrow-right search-form__fas"></i></a></div>
           </div>
           <div class="slogan text_textstyle">Лучшие номера для вашей работы, отдыха и просто вдохновения</div>
         </div>

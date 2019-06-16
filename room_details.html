@@ -45,8 +45,20 @@
           </form>
         </div>
         <div class="guest search-form__guest search-form__guest_margins"><span class="search-form__text headline">гости</span>
-          <form class="search-form__form" action="#">
-            <input class="input input_width_320px" type="text" placeholder="Сколько гостей"><a href="#"><i class="fas fa-chevron-down fas_posa"></i></a>
+          <form class="search-form__form" action="#" onsubmit="return false">
+            <div class="dropdown dropdown_width320" data-dropdown="open">
+              <input class="input dropdown-header input_width_320px" type="text" placeholder="Сколько гостей">
+              <div class="dropdown-body dropdown-body__landing">
+                <div class="dropdown__name dropdown__name_styles-for-guest_input">Взрослые<span class="number"><span class="minus">-</span>
+                    <input class="dropdown__input" type="text" placeholder="0" value="0"><span class="plus">+</span></span></div>
+                <div class="dropdown__name dropdown__name_styles-for-guest_input">Дети<span class="number"><span class="minus">-</span>
+                    <input class="dropdown__input" type="text" placeholder="0" value="0"><span class="plus">+</span></span></div>
+                <div class="dropdown__name dropdown__name_styles-for-guest_input">Младенцы<span class="number"><span class="minus">-</span>
+                    <input class="dropdown__input" type="text" placeholder="0" value="0"><span class="plus">+</span></span></div>
+                <button class="reset">Очистить </button>
+                <button class="complete">Применить </button>
+              </div><a href="#"><i class="fas fa-chevron-down fas_posa"></i></a>
+            </div>
           </form>
         </div>
         <div class="search-form__price">
