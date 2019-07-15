@@ -12,13 +12,13 @@
       <section class="left-sidebar">
         <div class="icons"><a href="#"><i class="icon-facebook"></i></a><a href="#"><i class="icon-twitter"></i></a><a href="#"><i class="icon-skype"></i></a></div>
         <ul class="left-sidebar__navigation">
-          <li><a href="#">О компании</a></li>
-          <li><a href="#">О проблемах</a></li>
+          <li><a href="#about">О компании</a></li>
+          <li><a href="#problems">О проблемах</a></li>
           <li><a href="#">Каталог</a></li>
-          <li><a href="#">Где купить</a></li>
+          <li><a href="#where-to-buy">Где купить</a></li>
           <li><a href="#">Вопрос-ответ</a></li>
-          <li><a href="#">On-line тест</a></li>
-          <li><a href="#">Контакты</a></li>
+          <li><a href="#online-test">On-line тест</a></li>
+          <li><a href="#contacts">Контакты</a></li>
         </ul>
         <div class="left-sidebar__contacts">
           <p class="left-sidebar__hotline">Горячая линия <br> по России</p>
@@ -26,8 +26,16 @@
         </div>
       </section>
       <section class="main-section">
+        <div class="feedback-form hide-feedback">
+          <p class="feedback-form__text">Ваше имя</p>
+          <input class="feedback-form__input" type="text" placeholder="Ваше имя">
+          <p class="feedback-form__text">Номер телефона</p>
+          <input class="feedback-form__input" type="tel" placeholder="Номер телефона" pattern="+7s?[(]{0,1}9[0-9]{2}[)]{0,1}s?d{3}[-]{0,1}d{2}[-]{0,1}d{2}" title="Введите телефон в формате +7, не более 12 символов">
+          <p class="feedback-form__text">Ваш вопрос</p>
+          <textarea class="feedback-form__textarea" name="" cols="21" rows="7"></textarea><a class="button feedback-form__button" href="#">Отправить</a>
+        </div>
         <section class="header"><a class="burger" href=""><span></span></a>
-          <div class="header__img"><a href="#"><img class="header__bausch-img" src="images/BAUSCH.png" alt="BAUSCH+LOMB"></a><a href="#"><img class="header__valeant-img" src="images/VALEANT.png" alt="VALEANT"></a></div><a class="header__question" href="#"><u>Задать вопрос</u> производителю<img src="images/comment.png" alt=""></a>
+          <div class="header__img"><a href="#" id="about"><img class="header__bausch-img" src="images/BAUSCH.png" alt="BAUSCH+LOMB"></a><a href="http://valeant.com.ru/" target="_blank"><img class="header__valeant-img" src="images/VALEANT.png" alt="VALEANT"></a></div><a class="header__question" href="#"><u>Задать вопрос</u> производителю<img src="images/comment.png" alt=""></a>
         </section>
         <section class="eyes">
           <div class="blue-eye">
@@ -44,7 +52,7 @@
             <div class="eyes__text">снижение риска развития <br> возрастных изменений глаз</div><img class="eye green-eye__eye" src="images/yellow_eye.png" alt=""><img class="eyes__lupein-baby" src="images/lutein_baby2.png" alt="Люпеин детский"><img class="eyes__lupein-adult" src="images/lutein_eye2.png" alt="Люпеин"><a class="eyes__complex" href="#">Лютеин комплекс</a>
           </div>
         </section>
-        <section class="bad-vision">
+        <section class="bad-vision" id="problems">
           <div class="slider">
             <div class="bad-vision__slide">
               <div class="bad-vision__text">
@@ -80,22 +88,40 @@
           <h1 class="h1 risk-groups__h1">Группы риска:</h1>
           <div class="risk-groups__img"><img src="images/man.png" alt=""></div>
           <div class="risk-groups__text">
-            <h3>Школьники и студенты</h3>
-            <p>В последнее десятилетие врачи отмечают печальную тенденцию: все чаще у детей школьного возраста выявляются болезни органов зрения. Сложный оптический прибор, идеально приспосабливающийся к изменчивым условиям окружающей среды, глаз оказался не подготовленным к современным реалиям.</p><a class="button risk-groups__button" href="#">Подробнее</a>
+            <div class="risk-groups__tab " data-set="0">
+              <h3>Работающие за компьютером</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum nihil expedita vel obcaecati blanditiis molestiae iste rerum fuga perferendis dolorum quas numquam distinctio, quod ab nam? Iusto labore dolor ab minima possimus vero corporis beatae expedita atque debitis culpa ullam, animi aliquid voluptates asperiores. Animi atque rerum debitis in modi?</p>
+            </div>
+            <div class="risk-groups__tab active-tab" data-set="1">
+              <h3>Школьники и студенты</h3>
+              <p>В последнее десятилетие врачи отмечают печальную тенденцию: все чаще у детей школьного возраста выявляются болезни органов зрения. Сложный оптический прибор, идеально приспосабливающийся к изменчивым условиям окружающей среды, глаз оказался не подготовленным к современным реалиям.</p>
+            </div>
+            <div class="risk-groups__tab" data-set="2">
+              <h3>Автолюбители</h3>
+              <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Он эта от всех переписали выйти. Безопасную переписали заглавных вдали буквенных строчка использовало безорфографичный не! Взобравшись буквоград запятой вопрос заманивший то свою однажды проектах маленький, страну агентство маленькая назад деревни последний!</p>
+            </div>
+            <div class="risk-groups__tab" data-set="3">
+              <h3>Люди с повышенными зрительными нагрузками</h3>
+              <p>В последнее десятилетие врачи отмечают печальную тенденцию: все чаще у детей школьного возраста выявляются болезни органов зрения. Сложный оптический прибор, идеально приспосабливающийся к изменчивым условиям окружающей среды, глаз оказался не подготовленным к современным реалиям.</p>
+            </div>
+            <div class="risk-groups__tab" data-set="4">
+              <h3>Туристы</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam aut temporibus aspernatur suscipit at delectus vero corrupti molestiae! Voluptates eum magni atque dolorem vitae doloribus hic quasi deleniti, corporis repudiandae delectus molestiae, illo nam.</p>
+            </div><a class="button risk-groups__button" href="#">Подробнее</a>
           </div>
           <div class="risk-groups__list">
-            <div class="risk-groups__navigation"><a class="risk-groups__link" href="#">Работающие за компьютером</a><a class="risk-groups__link" href="#">Школьники и студенты</a><a class="risk-groups__link" href="#">Автолюбители</a><a class="risk-groups__link" href="#">Люди с повышенными зрительными нагрузками</a><a class="risk-groups__link" href="#">Туристы</a></div>
+            <div class="risk-groups__navigation"><a class="risk-groups__link" href="#" data-set="0">Работающие за компьютером</a><a class="risk-groups__link active" href="#" data-set="1">Школьники и студенты</a><a class="risk-groups__link" href="#" data-set="2">Автолюбители</a><a class="risk-groups__link" href="#" data-set="3">Люди с повышенными зрительными нагрузками</a><a class="risk-groups__link" href="#" data-set="4">Туристы</a></div>
           </div>
         </section>
         <section class="other">
-          <div class="online-test">
+          <div class="online-test" id="online-test">
             <p class="other__title">On-line тест</p>
             <p class="other__text">Мы предллагаем пройти небольшой тест, который поможет легко и комфортно проверить <b>остроту, контрастность</b> и <b>цветовосприятие</b> вашего зрения</p><br><a class="button other__button button__blue" href="#">Пройти тест</a>
             <div class="online-test__footer"><img class="online-test__img" src="images/checkbox.png" alt="">
               <p>Если по результатам теста Вы отметите ухудшение зрения, <br> Вам следует обратиться к офтальмологу за дополнительной консультацией</p>
             </div>
           </div>
-          <div class="where-to-buy">
+          <div class="where-to-buy" id="where-to-buy">
             <p class="other__title">Где купить</p>
             <p class="other__text">Препараты можно приобрести в аптеках по всей России, а так же в интернет аптеках</p><a class="button other__button button__white" href="#">Подробнее</a>
           </div>
@@ -103,10 +129,10 @@
         <section class="footer">
           <div class="footer__warning">имеются противопоказания.перед применением ознакомьтесь <br> с инструкцией и проконсультируйтесь со специалистом</div>
           <div class="footer__info">
-            <div class="footer__img"><a href="#"><img src="images/VALEANT_footer.png" alt="VALEANT"></a></div>
-            <div class="footer__contacts">ООО «ВАЛЕАНТ», 115162, г. Москва, ул. Шаболовка, д.31, стр.5 <br> Тел./Факс: +7 495 510-2879 www.valeant.com</div>
+            <div class="footer__img"><a href="http://valeant.com.ru/" target="_blank"><img src="images/VALEANT_footer.png" alt="VALEANT"></a></div>
+            <div class="footer__contacts" id="contacts">ООО «ВАЛЕАНТ», 115162, г. Москва, ул. Шаболовка, д.31, стр.5 <br> Тел./Факс: +7 495 510-2879 www.valeant.com</div>
             <div class="footer__logo">
-              <div><a href="#"><img src="images/ITSOFT.png" alt=""></a></div><span class="footer__text"><u>Создание сайта.</u> <br> Веб-студия <em><b>itsoft</b></em></span>
+              <div><a href="https://itsoft.ru/" target="_blank"><img src="images/ITSOFT.png" alt="ITSOFT"></a></div><span class="footer__text"><u>Создание сайта.</u> <br> Веб-студия <em><b>itsoft</b></em></span>
             </div>
           </div>
         </section>
