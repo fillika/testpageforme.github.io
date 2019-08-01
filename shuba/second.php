@@ -16,7 +16,7 @@
 
         <header class="header">
             <div class="header__logo">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="https://bcassetcdn.com/asset/logo/c3754389-4234-4d99-97e7-5750742af2b0/logo?v=4&text=Logo+Text+Here"
                         alt="">
                 </a>

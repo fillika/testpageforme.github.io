@@ -1,7 +1,14 @@
 $(function () {
     $('.list-title').on('click', function () {
         var attr = $(this).attr('data-set');
-        $('.list-content[data-set='+ attr + ']').toggleClass('visible');
+        $('.list-content[data-set=' + attr + ']').toggleClass('visible');
+    })
+});
+
+$(function () {
+    $('.list-number').on('click', function () {
+        var atr = $(this).attr('data-set');
+        $('.main-variables').load('./pages/page' + atr + '.php')
     })
 });
 
