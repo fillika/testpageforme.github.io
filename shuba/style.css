@@ -1,0 +1,171 @@
+.wrapper {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo img {
+    width: 100px;
+}
+
+.header__contacts {
+    font-size: 30px;
+    display: flex;
+}
+
+.header__phone {
+    margin-right: 10px;
+}
+
+.header__social {
+    display: flex;
+}
+
+.header__vk,
+.header__inst {
+    display: block;
+    width: 100px;
+    height: 30px;
+}
+
+.main {
+    display: flex;
+
+}
+
+.aside-left {
+    flex-basis: 25%;
+    border: 1px solid indigo;
+}
+
+.variables {
+    flex-basis: 75%;
+    border: 1px solid green;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.variablel-item {
+    border: 1px solid green;
+    display: block;
+    width: 250px;
+    height: auto;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.variables-item__photo img {
+    width: 100%;
+}
+
+.variables-item__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.variables-item__button {
+    display: block;
+    border: 1px solid red;
+    width: 100px;
+    text-align: center;
+    height: 30px;
+    padding-top: 5px;
+    cursor: pointer;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
+.variables-item__bla {
+    width: 600px;
+}
+.variables-item__bla img {
+    width: 100%;
+}
+
+.variables__description {
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.variables-item__prise {
+  display: block;
+  width: 300px;
+  text-align: center;
+  height: 300px;
+  border: 1px solid rgb(135, 250, 150);
+  margin-left: 15px;
+  margin-top: 200px;
+}
+
+
+.variables-item__card {
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.block {
+    display: block;
+    width: 300px;
+    height: 50px;
+    border: 1px solid gray;
+    transition: .3s ease;
+}
+
+.block-title {
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    /* animation: move 3s infinite ease-in-out; */
+}
+
+.list-title:nth-child(odd) {
+    background-color: rgb(135, 250, 150);
+
+}
+
+.list-title:nth-child(4n + 1) {
+    background-color: rgb(101, 217, 238);
+}
+
+.list-content {
+    height: 0;
+    overflow: hidden;
+    border-top: none;
+    border-bottom: none;
+    background-color: rgb(235, 226, 226);
+}
+
+.visible {
+    height: 200px;
+}
+
+
+@keyframes move {
+    0% {
+        transform: translate(0%, 0%) scale(1);
+    }
+
+    50% {
+        transform: translate(100%, 0%) scale(1);
+    }
+}
