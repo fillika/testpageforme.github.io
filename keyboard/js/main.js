@@ -5,13 +5,14 @@ const upperOrNot = document.querySelectorAll(".letter");
 const text = `Разнообразный и богатый опыт рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Не следует, однако забывать, что новая модель организационной деятельности требуют от нас анализа системы обучения кадров, соответствует насущным потребностям. С другой стороны дальнейшее развитие различных форм деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Равным образом постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание существенных финансовых и административных условий. Не следует, однако забывать, что сложившаяся структура организации играет важную роль в формировании модели развития. Значимость этих проблем настолько очевидна, что консультация с широким активом влечет за собой процесс внедрения и модернизации модели развития. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Таким образом начало повседневной работы по формированию позиции способствует подготовки и реализации форм развития. Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание новых предложений. Товарищи! постоянный количественный рост и сфера нашей активности требуют определения и уточнения соответствующий условий активизации. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности способствует подготовки и реализации существенных финансовых и административных условий.`;
 
 let letterId = 1; // Переменная, которая хранит в себе актуальный символ (тот символ, который мы ожидаем). Будем увеличивать её в будущем как счетчик
+let mistakeCounter = 0; // Моя переменная для выяснения кол-ва ошибок
+let letterCounter = 0; // Сколько всего нажатий
+let startMoment = null;
 
 const lines = getLines(text); // lines содержит в себе массив из 27 массивов в каждом по 70 объектов (каждая буква - объект)
 
 // С этой функции мы начнем работу
 init();
-
-console.log(upperOrNot);
 
 function init() {
   clearAndUpdate();
@@ -25,6 +26,20 @@ function init() {
       `[data-code="${event.code}"]`
     );
     const currentLetter = getCurrentLetter();
+
+    // console.log(letterCounter);
+
+    if (startMoment == null) {
+      startMoment = Date.now();
+    }
+
+    console.log(startMoment);
+
+    if (event.key === "Shift" || event.key === "CapsLock") {
+      return;
+    } else {
+      letterCounter += 1;
+    }
 
     // Отслеживаем все F1-12.
     // return заканчивает выполнение всей функции, не доходя до preventDefault(), а значит кнокпи с f1-12 будут рабоатьб
@@ -56,14 +71,33 @@ function init() {
     if (event.key === currentLetter.label) {
       letterId = letterId + 1;
       clearAndUpdate();
+    } else if (event.key === "Shift") {
+      return;
+    } else if (event.key === "CapsLock") {
+      return;
     } else {
+      mistakeCounter += 1;
       event.preventDefault();
+
+      currentLetter.succes = false;
+      clearAndUpdate();
     }
 
     // Если текущая линия меньше первоначальной, то текст стирается (очищаем линии)ы
     if (currentLineNumber !== getCurrentLineNumber()) {
       inputElement.value = "";
       event.preventDefault();
+
+      const time = Date.now() - startMoment;
+      console.log(time);
+      document.querySelector("#wordsSpeed").textContent = Math.round(
+        letterCounter / (time / 60000)
+      );
+      document.querySelector("#mistakePercent").textContent =
+        Math.floor(100 * (mistakeCounter / letterCounter)) + "%";
+      startMoment = null;
+      letterCounter = 0;
+      mistakeCounter = 0;
     }
   });
 
@@ -137,6 +171,10 @@ function lineToHTML(line) {
     // Все символы, ID которых меньше letterID получают класс done
     if (letterId > letter.id) {
       spanEl.classList.add("done");
+    }
+
+    if (!letter.succes) {
+      spanEl.classList.add("hint");
     }
   }
   return divElement;
