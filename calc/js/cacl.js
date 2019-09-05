@@ -2,15 +2,47 @@ window.addEventListener("load", () => {
   const input = document.querySelector(".field");
   const output = document.querySelector(".story");
   const buttons = document.querySelectorAll(".cell");
-  const clearButton = document.querySelector("[data-key='с']");
+  const clearButton = document.querySelector("[data-key='c']");
   const plusButton = document.querySelector("[data-key='+']");
   const minusButton = document.querySelector("[data-key='-']");
   const equally = document.querySelector("[data-key='=']");
   const multiple = document.querySelector("[data-key='*']");
   const split = document.querySelector("[data-key='/']");
 
+  const whatIs = {
+    isPlus: () => {
+      checkSpaceOutput();
+      isPlus = false;
+      arrNum = parseFloat(input.textContent);
+      totalCount = totalCount + arrNum;
+      clearFields();
+    },
+    isMinus: () => {
+      checkSpaceOutput();
+      isMinus = false;
+      arrNum = parseFloat(input.textContent);
+      totalCount = totalCount - arrNum;
+      clearFields();
+    },
+    isMultiple: () => {
+      checkSpaceOutput();
+      isMultiple = false;
+      arrNum = parseFloat(input.textContent);
+      totalCount = totalCount * arrNum;
+      clearFields();
+    },
+    isSplit: () => {
+      checkSpaceOutput();
+      isSplit = false;
+      arrNum = parseFloat(input.textContent);
+      totalCount = totalCount / arrNum;
+      clearFields();
+    }
+  };
+
   let arrNum = 0;
   let totalCount = 0;
+
   let isPlus = false;
   let isMinus = false;
   let isMultiple = false;
@@ -22,12 +54,16 @@ window.addEventListener("load", () => {
     document.body.addEventListener("keydown", function(event) {
       let numbers = parseFloat(event.key);
 
+      console.log(event);
+
       if (numbers >= 0 || numbers <= 9) {
         if (input.textContent.length > 14) {
           return;
         }
         input.textContent += event.key;
       }
+
+      numpadCacl();
     });
 
     for (let i = 0; i < buttons.length; i++) {
@@ -73,7 +109,7 @@ window.addEventListener("load", () => {
     isSplit = false;
   }
 
-  /* ???????? */
+  // Функции действий (сложение, вычитание, умножение и деление)
 
   function plus() {
     if (!input.textContent) {
@@ -139,43 +175,7 @@ window.addEventListener("load", () => {
     clearFields();
   }
 
-  /* ???????? */
-
-  // ??????, ? ???????? ?????? ??????????, ???? ???????????? ?? ???????? ?????, ? ???????? ?????????? ????????? (???????? 26 + 35 - 10 / 2 * 5)
-  // ????? ???????? ???? ????? ??????????
-  const whatIs = {
-    isPlus: () => {
-      checkSpaceOutput();
-      isPlus = false;
-      arrNum = parseFloat(input.textContent);
-      totalCount = totalCount + arrNum;
-      clearFields();
-    },
-    isMinus: () => {
-      checkSpaceOutput();
-      isMinus = false;
-      arrNum = parseFloat(input.textContent);
-      totalCount = totalCount - arrNum;
-      clearFields();
-    },
-    isMultiple: () => {
-      checkSpaceOutput();
-      isMultiple = false;
-      arrNum = parseFloat(input.textContent);
-      totalCount = totalCount * arrNum;
-      clearFields();
-    },
-    isSplit: () => {
-      checkSpaceOutput();
-      isSplit = false;
-      arrNum = parseFloat(input.textContent);
-      totalCount = totalCount / arrNum;
-      clearFields();
-    }
-  };
-
   calc = () => {
-    // ???? ????? ?????, ????????, ??? ???? ?????? ????? ???? ? ???????? ??? (????????, ???????????? ????? + ? ????? ????? ? ????? ?????)
     if (event.target == equally) {
       if (isPlus) {
         isPlus = false;
@@ -237,7 +237,7 @@ window.addEventListener("load", () => {
 
     if (event.target == multiple) {
       if (isPlus) {
-        whatIs.isPlus;
+        whatIs.isPlus();
       }
 
       if (isMinus) {
@@ -268,6 +268,106 @@ window.addEventListener("load", () => {
     }
 
     if (event.target == clearButton) {
+      input.textContent = "";
+      arrNum = [];
+      totalCount = output.textContent = "";
+      allFalse();
+    }
+  };
+
+  numpadCacl = () => {
+    if (event.key == "+") {
+      if (isMinus) {
+        whatIs.isMinus();
+      }
+
+      if (isSplit) {
+        whatIs.isSplit();
+      }
+
+      if (isMultiple) {
+        whatIs.isMultiple();
+      }
+
+      plus();
+    }
+
+    if (event.key == "-") {
+      if (isPlus) {
+        whatIs.isPlus();
+      }
+
+      if (isSplit) {
+        whatIs.isSplit();
+      }
+
+      if (isMultiple) {
+        whatIs.isMultiple();
+      }
+
+      minus();
+    }
+
+    if (event.key == "*") {
+      if (isPlus) {
+        whatIs.isPlus();
+      }
+
+      if (isMinus) {
+        whatIs.isMinus();
+      }
+
+      if (isSplit) {
+        whatIs.isSplit();
+      }
+
+      multipleNum();
+    }
+
+    if (event.key == "/") {
+      if (isPlus) {
+        whatIs.isPlus();
+      }
+
+      if (isMinus) {
+        whatIs.isMinus();
+      }
+
+      if (isMultiple) {
+        whatIs.isMultiple();
+      }
+
+      splitNum();
+    }
+
+    if (event.key == "Enter") {
+      if (isPlus) {
+        isPlus = false;
+        arrNum = parseFloat(input.textContent);
+        totalCount = parseFloat((totalCount + arrNum).toFixed(5));
+        clearFields();
+      }
+      if (isMinus) {
+        isMinus = false;
+        arrNum = parseFloat(input.textContent);
+        totalCount = parseFloat((totalCount - arrNum).toFixed(5));
+        clearFields();
+      }
+      if (isMultiple) {
+        isMultiple = false;
+        arrNum = parseFloat(input.textContent);
+        totalCount = parseFloat((totalCount * arrNum).toFixed(5));
+        clearFields();
+      }
+      if (isSplit) {
+        isSplit = false;
+        arrNum = parseFloat(input.textContent);
+        totalCount = parseFloat((totalCount / arrNum).toFixed(5));
+        clearFields();
+      }
+    }
+
+    if (event.key == "Delete") {
       input.textContent = "";
       arrNum = [];
       totalCount = output.textContent = "";

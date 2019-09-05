@@ -12,28 +12,35 @@ body {
 
 .container {
   display: flex;
-align-self: center;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-content: center;
 }
 
 .calculator {
   max-width: 400px;
   width: 400px;
-  height: 600px;
+  height: auto;
   margin: 5% 1%;
+}
+
+.calculator__row-0 {
+  margin: 0.2%;
 }
 
 .textarea {
   max-width: 400px;
   width: 400px;
-  height: 600px;
+  height: auto;
+  min-height: 300px;
   border: 1px solid #111;
   margin: 5% 0%;
-
 }
 
 .cell {
   display: block;
-  width: 90px;
+  flex: 1;
+  margin: 0.2%;
   height: 90px;
   border: 1px solid indigo;
   cursor: pointer;
@@ -41,7 +48,7 @@ align-self: center;
   font-size: 2rem;
 }
 
-.cell:hover {
+.no-touch .cell:hover {
   transition: 0.3s ease;
   background-color: indigo;
   color: #fff;
@@ -75,5 +82,5 @@ align-self: center;
 .calculator__row-5 {
   display: flex;
   justify-content: space-between;
-  margin-top: 2%;
+  margin-top: 0.2%;
 }
