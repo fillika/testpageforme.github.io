@@ -1,6 +1,7 @@
 window.addEventListener("load", () => {
   const input = document.querySelector(".field");
   const output = document.querySelector(".story");
+  const sign = document.querySelector(".sign");
   const buttons = document.querySelectorAll(".cell");
   const clearButton = document.querySelector("[data-key='c']");
   const plusButton = document.querySelector("[data-key='+']");
@@ -8,12 +9,14 @@ window.addEventListener("load", () => {
   const equally = document.querySelector("[data-key='=']");
   const multiple = document.querySelector("[data-key='*']");
   const split = document.querySelector("[data-key='/']");
+  const backspace = document.querySelector("[data-key='Backspace']");
 
   const whatIs = {
     isPlus: () => {
       checkSpaceOutput();
       isPlus = false;
       arrNum = parseFloat(input.textContent);
+
       totalCount = totalCount + arrNum;
       clearFields();
     },
@@ -21,6 +24,7 @@ window.addEventListener("load", () => {
       checkSpaceOutput();
       isMinus = false;
       arrNum = parseFloat(input.textContent);
+
       totalCount = totalCount - arrNum;
       clearFields();
     },
@@ -28,6 +32,7 @@ window.addEventListener("load", () => {
       checkSpaceOutput();
       isMultiple = false;
       arrNum = parseFloat(input.textContent);
+
       totalCount = totalCount * arrNum;
       clearFields();
     },
@@ -35,6 +40,7 @@ window.addEventListener("load", () => {
       checkSpaceOutput();
       isSplit = false;
       arrNum = parseFloat(input.textContent);
+
       totalCount = totalCount / arrNum;
       clearFields();
     }
@@ -42,6 +48,7 @@ window.addEventListener("load", () => {
 
   let arrNum = 0;
   let totalCount = 0;
+  let storyArr = [];
 
   let isPlus = false;
   let isMinus = false;
@@ -53,8 +60,6 @@ window.addEventListener("load", () => {
   function init() {
     document.body.addEventListener("keydown", function(event) {
       let numbers = parseFloat(event.key);
-
-      console.log(event);
 
       if (numbers >= 0 || numbers <= 9) {
         if (input.textContent.length > 14) {
@@ -112,65 +117,98 @@ window.addEventListener("load", () => {
   // Функции действий (сложение, вычитание, умножение и деление)
 
   function plus() {
+    sign.textContent = "";
+    sign.textContent = "+";
+
     if (!input.textContent) {
       isPlus = true;
       return;
     }
+
     isPlus = true;
+
     if (output.textContent.length == 0) {
       checkSpaceField();
       clearFields();
+
       return;
     }
+
     arrNum = parseFloat(input.textContent);
+
     totalCount = parseFloat((totalCount + arrNum).toFixed(5));
+
     clearFields();
   }
 
   function minus() {
+    sign.textContent = "";
+    sign.textContent = "-";
+
     if (!input.textContent) {
       isMinus = true;
       return;
     }
+
     isMinus = true;
+
     if (output.textContent.length == 0) {
       checkSpaceField();
       clearFields();
+
       return;
     }
+
     arrNum = parseFloat(input.textContent);
+
     totalCount = parseFloat((totalCount - arrNum).toFixed(5));
     clearFields();
   }
 
   function multipleNum() {
+    sign.textContent = "";
+    sign.textContent = "*";
+
     if (!input.textContent) {
       isMultiple = true;
       return;
     }
+
     isMultiple = true;
+
     if (output.textContent.length == 0) {
       checkSpaceField();
       clearFields();
+
       return;
     }
+
     arrNum = parseFloat(input.textContent);
+
     totalCount = parseFloat((totalCount * arrNum).toFixed(5));
     clearFields();
   }
 
   function splitNum() {
+    sign.textContent = "";
+    sign.textContent = "/";
+
     if (!input.textContent) {
       isSplit = true;
       return;
     }
+
     isSplit = true;
+
     if (output.textContent.length == 0) {
       checkSpaceField();
       clearFields();
+
       return;
     }
+
     arrNum = parseFloat(input.textContent);
+
     totalCount = parseFloat((totalCount / arrNum).toFixed(5));
     clearFields();
   }
@@ -180,25 +218,37 @@ window.addEventListener("load", () => {
       if (isPlus) {
         isPlus = false;
         arrNum = parseFloat(input.textContent);
+
         totalCount = parseFloat((totalCount + arrNum).toFixed(5));
+
+        sign.textContent = "";
         clearFields();
       }
       if (isMinus) {
         isMinus = false;
         arrNum = parseFloat(input.textContent);
+
         totalCount = parseFloat((totalCount - arrNum).toFixed(5));
+
+        sign.textContent = "";
         clearFields();
       }
       if (isMultiple) {
         isMultiple = false;
         arrNum = parseFloat(input.textContent);
+
         totalCount = parseFloat((totalCount * arrNum).toFixed(5));
+
+        sign.textContent = "";
         clearFields();
       }
       if (isSplit) {
         isSplit = false;
         arrNum = parseFloat(input.textContent);
+
         totalCount = parseFloat((totalCount / arrNum).toFixed(5));
+
+        sign.textContent = "";
         clearFields();
       }
     }
@@ -269,9 +319,15 @@ window.addEventListener("load", () => {
 
     if (event.target == clearButton) {
       input.textContent = "";
+      sign.textContent = "";
       arrNum = [];
       totalCount = output.textContent = "";
       allFalse();
+    }
+
+    if (event.target == backspace) {
+      let getStr = input.textContent;
+      input.textContent = getStr.slice(0, -1);
     }
   };
 
@@ -345,33 +401,43 @@ window.addEventListener("load", () => {
         isPlus = false;
         arrNum = parseFloat(input.textContent);
         totalCount = parseFloat((totalCount + arrNum).toFixed(5));
+        sign.textContent = "";
         clearFields();
       }
       if (isMinus) {
         isMinus = false;
         arrNum = parseFloat(input.textContent);
         totalCount = parseFloat((totalCount - arrNum).toFixed(5));
+        sign.textContent = "";
         clearFields();
       }
       if (isMultiple) {
         isMultiple = false;
         arrNum = parseFloat(input.textContent);
         totalCount = parseFloat((totalCount * arrNum).toFixed(5));
+        sign.textContent = "";
         clearFields();
       }
       if (isSplit) {
         isSplit = false;
         arrNum = parseFloat(input.textContent);
         totalCount = parseFloat((totalCount / arrNum).toFixed(5));
+        sign.textContent = "";
         clearFields();
       }
     }
 
     if (event.key == "Delete") {
+      sign.textContent = "";
       input.textContent = "";
       arrNum = [];
       totalCount = output.textContent = "";
       allFalse();
+    }
+
+    if (event.key == "Backspace") {
+      let getStr = input.textContent;
+      input.textContent = getStr.slice(0, -1);
     }
   };
 });
