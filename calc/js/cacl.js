@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
   const split = document.querySelector("[data-key='/']");
   const backspace = document.querySelector("[data-key='Backspace']");
   const textarea = document.querySelector(".textarea");
-  const html5Multiple = String.fromCharCode(10006);
+  const html5Multiple = String.fromCharCode(215);
   const html5Split = String.fromCharCode(247);
 
   const whatIs = {
@@ -52,11 +52,13 @@ window.addEventListener("load", () => {
   let arrNum = 0;
   let totalCount = 0;
   let storyArr = [];
+  let lastTotalCount;
 
   let isPlus = false;
   let isMinus = false;
   let isMultiple = false;
   let isSplit = false;
+  let isEqually = false;
 
   init();
 
@@ -228,14 +230,20 @@ window.addEventListener("load", () => {
     clearFields();
   }
 
+  // Функции действий (сложение, вычитание, умножение и деление)
+
   calc = () => {
     if (event.target == equally) {
       if (isPlus) {
+        isEqually = true;
         isPlus = false;
         arrNum = parseFloat(input.textContent);
         storyArr.push(arrNum);
         totalCount = parseFloat((totalCount + arrNum).toFixed(5));
         storyArr.push(` = ${totalCount}`);
+
+        storyArr.unshift(lastTotalCount);
+        lastTotalCount = totalCount; // Сохраняем число после нажатия на РАВНО
 
         insertText();
 
@@ -244,11 +252,15 @@ window.addEventListener("load", () => {
       }
 
       if (isMinus) {
+        isEqually = true;
         isMinus = false;
         arrNum = parseFloat(input.textContent);
         storyArr.push(arrNum);
         totalCount = parseFloat((totalCount - arrNum).toFixed(5));
         storyArr.push(` = ${totalCount}`);
+        storyArr.unshift(lastTotalCount);
+
+        lastTotalCount = totalCount; // Сохраняем число после нажатия на РАВНО
 
         insertText();
 
@@ -257,11 +269,15 @@ window.addEventListener("load", () => {
       }
 
       if (isMultiple) {
+        isEqually = true;
         isMultiple = false;
         arrNum = parseFloat(input.textContent);
         storyArr.push(arrNum);
         totalCount = parseFloat((totalCount * arrNum).toFixed(5));
         storyArr.push(` = ${totalCount}`);
+        storyArr.unshift(lastTotalCount);
+
+        lastTotalCount = totalCount; // Сохраняем число после нажатия на РАВНО
 
         insertText();
 
@@ -270,11 +286,15 @@ window.addEventListener("load", () => {
       }
 
       if (isSplit) {
+        isEqually = true;
         isSplit = false;
         arrNum = parseFloat(input.textContent);
         storyArr.push(arrNum);
         totalCount = parseFloat((totalCount / arrNum).toFixed(5));
         storyArr.push(` = ${totalCount}`);
+        storyArr.unshift(lastTotalCount);
+
+        lastTotalCount = totalCount; // Сохраняем число после нажатия на РАВНО
 
         insertText();
 
@@ -435,6 +455,9 @@ window.addEventListener("load", () => {
         totalCount = parseFloat((totalCount + arrNum).toFixed(5));
         storyArr.push(` = ${totalCount}`);
 
+        storyArr.unshift(lastTotalCount);
+        lastTotalCount = totalCount; // Сохраняем число после нажатия на РАВНО
+
         insertText();
         sign.textContent = "";
         clearFields();
@@ -446,6 +469,9 @@ window.addEventListener("load", () => {
         storyArr.push(arrNum);
         totalCount = parseFloat((totalCount - arrNum).toFixed(5));
         storyArr.push(` = ${totalCount}`);
+
+        storyArr.unshift(lastTotalCount);
+        lastTotalCount = totalCount; // Сохраняем число после нажатия на РАВНО
 
         insertText();
         sign.textContent = "";
@@ -459,6 +485,9 @@ window.addEventListener("load", () => {
         totalCount = parseFloat((totalCount * arrNum).toFixed(5));
         storyArr.push(` = ${totalCount}`);
 
+        storyArr.unshift(lastTotalCount);
+        lastTotalCount = totalCount; // Сохраняем число после нажатия на РАВНО
+
         insertText();
 
         sign.textContent = "";
@@ -471,6 +500,9 @@ window.addEventListener("load", () => {
         storyArr.push(arrNum);
         totalCount = parseFloat((totalCount / arrNum).toFixed(5));
         storyArr.push(` = ${totalCount}`);
+
+        storyArr.unshift(lastTotalCount);
+        lastTotalCount = totalCount; // Сохраняем число после нажатия на РАВНО
 
         insertText();
         sign.textContent = "";
