@@ -47,7 +47,6 @@ window.onload = function() {
     };
 
     getColors();
-    startGame();
     intervalID;
 
     for (let i = 0; i < cells.length; i++) {
