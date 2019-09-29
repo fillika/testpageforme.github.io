@@ -10,13 +10,16 @@ window.addEventListener("load", () => {
   const multiple = document.querySelector("[data-key='*']");
   const split = document.querySelector("[data-key='/']");
   const backspace = document.querySelector("[data-key='Backspace']");
+  const textarea = document.querySelector(".textarea");
+  const html5Multiple = String.fromCharCode(215);
+  const html5Split = String.fromCharCode(247);
 
   const whatIs = {
     isPlus: () => {
       checkSpaceOutput();
       isPlus = false;
       arrNum = parseFloat(input.textContent);
-
+      storyArr.push(arrNum);
       totalCount = totalCount + arrNum;
       clearFields();
     },
@@ -24,7 +27,7 @@ window.addEventListener("load", () => {
       checkSpaceOutput();
       isMinus = false;
       arrNum = parseFloat(input.textContent);
-
+      storyArr.push(arrNum);
       totalCount = totalCount - arrNum;
       clearFields();
     },
@@ -32,7 +35,7 @@ window.addEventListener("load", () => {
       checkSpaceOutput();
       isMultiple = false;
       arrNum = parseFloat(input.textContent);
-
+      storyArr.push(arrNum);
       totalCount = totalCount * arrNum;
       clearFields();
     },
@@ -40,7 +43,7 @@ window.addEventListener("load", () => {
       checkSpaceOutput();
       isSplit = false;
       arrNum = parseFloat(input.textContent);
-
+      storyArr.push(arrNum);
       totalCount = totalCount / arrNum;
       clearFields();
     }
@@ -49,11 +52,13 @@ window.addEventListener("load", () => {
   let arrNum = 0;
   let totalCount = 0;
   let storyArr = [];
+  let lastTotalCount;
 
   let isPlus = false;
   let isMinus = false;
   let isMultiple = false;
   let isSplit = false;
+  let isEqually = false;
 
   init();
 
@@ -120,6 +125,9 @@ window.addEventListener("load", () => {
     sign.textContent = "";
     sign.textContent = "+";
 
+    storyArr.push(input.textContent);
+    storyArr.push("+");
+
     if (!input.textContent) {
       isPlus = true;
       return;
@@ -145,6 +153,9 @@ window.addEventListener("load", () => {
     sign.textContent = "";
     sign.textContent = "-";
 
+    storyArr.push(input.textContent);
+    storyArr.push("-");
+
     if (!input.textContent) {
       isMinus = true;
       return;
@@ -167,7 +178,10 @@ window.addEventListener("load", () => {
 
   function multipleNum() {
     sign.textContent = "";
-    sign.textContent = "*";
+    sign.textContent = html5Multiple;
+
+    storyArr.push(input.textContent);
+    storyArr.push(html5Multiple);
 
     if (!input.textContent) {
       isMultiple = true;
@@ -191,7 +205,10 @@ window.addEventListener("load", () => {
 
   function splitNum() {
     sign.textContent = "";
-    sign.textContent = "/";
+    sign.textContent = html5Split;
+
+    storyArr.push(input.textContent);
+    storyArr.push(html5Split);
 
     if (!input.textContent) {
       isSplit = true;
@@ -213,40 +230,73 @@ window.addEventListener("load", () => {
     clearFields();
   }
 
+  // Функции действий (сложение, вычитание, умножение и деление)
+
   calc = () => {
     if (event.target == equally) {
       if (isPlus) {
+        isEqually = true;
         isPlus = false;
         arrNum = parseFloat(input.textContent);
-
+        storyArr.push(arrNum);
         totalCount = parseFloat((totalCount + arrNum).toFixed(5));
+        storyArr.push(` = ${totalCount}`);
+
+        storyArr.unshift(lastTotalCount);
+        lastTotalCount = totalCount; // Сохраняем число после нажатия на РАВНО
+
+        insertText();
 
         sign.textContent = "";
         clearFields();
       }
+
       if (isMinus) {
+        isEqually = true;
         isMinus = false;
         arrNum = parseFloat(input.textContent);
-
+        storyArr.push(arrNum);
         totalCount = parseFloat((totalCount - arrNum).toFixed(5));
+        storyArr.push(` = ${totalCount}`);
+        storyArr.unshift(lastTotalCount);
+
+        lastTotalCount = totalCount; // Сохраняем число после нажатия на РАВНО
+
+        insertText();
 
         sign.textContent = "";
         clearFields();
       }
+
       if (isMultiple) {
+        isEqually = true;
         isMultiple = false;
         arrNum = parseFloat(input.textContent);
-
+        storyArr.push(arrNum);
         totalCount = parseFloat((totalCount * arrNum).toFixed(5));
+        storyArr.push(` = ${totalCount}`);
+        storyArr.unshift(lastTotalCount);
+
+        lastTotalCount = totalCount; // Сохраняем число после нажатия на РАВНО
+
+        insertText();
 
         sign.textContent = "";
         clearFields();
       }
+
       if (isSplit) {
+        isEqually = true;
         isSplit = false;
         arrNum = parseFloat(input.textContent);
-
+        storyArr.push(arrNum);
         totalCount = parseFloat((totalCount / arrNum).toFixed(5));
+        storyArr.push(` = ${totalCount}`);
+        storyArr.unshift(lastTotalCount);
+
+        lastTotalCount = totalCount; // Сохраняем число после нажатия на РАВНО
+
+        insertText();
 
         sign.textContent = "";
         clearFields();
@@ -400,28 +450,61 @@ window.addEventListener("load", () => {
       if (isPlus) {
         isPlus = false;
         arrNum = parseFloat(input.textContent);
+
+        storyArr.push(arrNum);
         totalCount = parseFloat((totalCount + arrNum).toFixed(5));
+        storyArr.push(` = ${totalCount}`);
+
+        storyArr.unshift(lastTotalCount);
+        lastTotalCount = totalCount; // Сохраняем число после нажатия на РАВНО
+
+        insertText();
         sign.textContent = "";
         clearFields();
       }
       if (isMinus) {
         isMinus = false;
         arrNum = parseFloat(input.textContent);
+
+        storyArr.push(arrNum);
         totalCount = parseFloat((totalCount - arrNum).toFixed(5));
+        storyArr.push(` = ${totalCount}`);
+
+        storyArr.unshift(lastTotalCount);
+        lastTotalCount = totalCount; // Сохраняем число после нажатия на РАВНО
+
+        insertText();
         sign.textContent = "";
         clearFields();
       }
       if (isMultiple) {
         isMultiple = false;
         arrNum = parseFloat(input.textContent);
+
+        storyArr.push(arrNum);
         totalCount = parseFloat((totalCount * arrNum).toFixed(5));
+        storyArr.push(` = ${totalCount}`);
+
+        storyArr.unshift(lastTotalCount);
+        lastTotalCount = totalCount; // Сохраняем число после нажатия на РАВНО
+
+        insertText();
+
         sign.textContent = "";
         clearFields();
       }
       if (isSplit) {
         isSplit = false;
         arrNum = parseFloat(input.textContent);
+
+        storyArr.push(arrNum);
         totalCount = parseFloat((totalCount / arrNum).toFixed(5));
+        storyArr.push(` = ${totalCount}`);
+
+        storyArr.unshift(lastTotalCount);
+        lastTotalCount = totalCount; // Сохраняем число после нажатия на РАВНО
+
+        insertText();
         sign.textContent = "";
         clearFields();
       }
@@ -439,5 +522,15 @@ window.addEventListener("load", () => {
       let getStr = input.textContent;
       input.textContent = getStr.slice(0, -1);
     }
+  };
+
+  insertText = () => {
+    let span = document.createElement("span");
+    span.classList.add("textarea__span");
+
+    let str = storyArr.join(" "); // Преобразую массив в строку с заменой запятой на пробел
+    span.textContent = str;
+    textarea.append(span);
+    storyArr = [];
   };
 });
