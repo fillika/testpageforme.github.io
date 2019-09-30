@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a,
+label,
+input {
+  cursor: pointer;
+}
+
+.wrapper {
+  display: block;
+  position: relative;
+  max-width: 350px;
+  height: auto;
+  border: 1px solid blue;
+  margin: auto;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mans,
+.womans {
+  display: block;
+  width: 48%;
+  height: 40px;
+  text-align: center;
+  border: 1px solid indigo;
+  line-height: 1.75;
+  font-size: 21px;
+}
+
+.mans-container {
+  width: 95%;
+  margin: auto;
+}
+
+select {
+  width: 100%;
+  height: 40px;
+  font-size: 15px;
+  margin-top: 30px;
+}
+
+.zap-or-ocher,
+.oldman {
+  font-size: 20px;
+  margin-top: 25px;
+}
+
+.button-result__link {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  color: black;
+  width: 250px;
+  height: 45px;
+  background-color: aqua;
+  border-radius: 11px;
+  line-height: 1.5;
+  font-weight: bold;
+  margin: 25px auto;
+}
+
+
+.total {
+font-size: 24px;
+}
+
+.total__cost {
+  text-decoration: underline;
+}
+
+.description {
+  opacity: 0;
+  margin: 25px 10px;
+  font-size: 18px;
+}
+
+.wrapper:hover .description {
+  transition: .7s all ease;
+  opacity: 1;
+}
