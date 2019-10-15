@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   loadNews();
 });
 
-http = function http() {
+var http = function http() {
   return {
     get: function get(url, cb) {
       try {
