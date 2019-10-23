@@ -18,6 +18,10 @@ class Scene1 extends Phaser.Scene {
 
   create() {
     this.add.text(517, 394, "Loading game...");
-    this.scene.start("playGame");
+    this.add.text(517, 420, "Всего 3 сцены (включая эту)");
+    this.add.text(517, 446, "Вторая сцена длится 10 секунд");
+    setTimeout(() => {
+      this.scene.start("playGame");
+    }, 5000)
   }
 }
