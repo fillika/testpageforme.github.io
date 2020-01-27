@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/testpageforme.github.io/finance-journal/static/css/main.a4c478d2.chunk.css",
-    "main.js": "/testpageforme.github.io/finance-journal/static/js/main.b10b7418.chunk.js",
-    "main.js.map": "/testpageforme.github.io/finance-journal/static/js/main.b10b7418.chunk.js.map",
+    "main.css": "/testpageforme.github.io/finance-journal/static/css/main.8cdf159f.chunk.css",
+    "main.js": "/testpageforme.github.io/finance-journal/static/js/main.073f1ba6.chunk.js",
+    "main.js.map": "/testpageforme.github.io/finance-journal/static/js/main.073f1ba6.chunk.js.map",
     "runtime-main.js": "/testpageforme.github.io/finance-journal/static/js/runtime-main.d2fdf836.js",
     "runtime-main.js.map": "/testpageforme.github.io/finance-journal/static/js/runtime-main.d2fdf836.js.map",
     "static/js/2.387d36dc.chunk.js": "/testpageforme.github.io/finance-journal/static/js/2.387d36dc.chunk.js",
     "static/js/2.387d36dc.chunk.js.map": "/testpageforme.github.io/finance-journal/static/js/2.387d36dc.chunk.js.map",
     "index.html": "/testpageforme.github.io/finance-journal/index.html",
-    "precache-manifest.a2d0d42e9d7afc221cd8b037843c8e38.js": "/testpageforme.github.io/finance-journal/precache-manifest.a2d0d42e9d7afc221cd8b037843c8e38.js",
+    "precache-manifest.ad94133ee20af5922652800d2b825a0e.js": "/testpageforme.github.io/finance-journal/precache-manifest.ad94133ee20af5922652800d2b825a0e.js",
     "service-worker.js": "/testpageforme.github.io/finance-journal/service-worker.js",
-    "static/css/main.a4c478d2.chunk.css.map": "/testpageforme.github.io/finance-journal/static/css/main.a4c478d2.chunk.css.map",
+    "static/css/main.8cdf159f.chunk.css.map": "/testpageforme.github.io/finance-journal/static/css/main.8cdf159f.chunk.css.map",
     "static/js/2.387d36dc.chunk.js.LICENSE": "/testpageforme.github.io/finance-journal/static/js/2.387d36dc.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.d2fdf836.js",
     "static/js/2.387d36dc.chunk.js",
-    "static/css/main.a4c478d2.chunk.css",
-    "static/js/main.b10b7418.chunk.js"
+    "static/css/main.8cdf159f.chunk.css",
+    "static/js/main.073f1ba6.chunk.js"
   ]
 }
