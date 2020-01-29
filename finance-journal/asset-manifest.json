@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/testpageforme.github.io/finance-journal/static/css/main.d573aec2.chunk.css",
-    "main.js": "/testpageforme.github.io/finance-journal/static/js/main.ba0e2656.chunk.js",
-    "main.js.map": "/testpageforme.github.io/finance-journal/static/js/main.ba0e2656.chunk.js.map",
+    "main.css": "/testpageforme.github.io/finance-journal/static/css/main.8b7b5224.chunk.css",
+    "main.js": "/testpageforme.github.io/finance-journal/static/js/main.699459a3.chunk.js",
+    "main.js.map": "/testpageforme.github.io/finance-journal/static/js/main.699459a3.chunk.js.map",
     "runtime-main.js": "/testpageforme.github.io/finance-journal/static/js/runtime-main.d2fdf836.js",
     "runtime-main.js.map": "/testpageforme.github.io/finance-journal/static/js/runtime-main.d2fdf836.js.map",
-    "static/js/2.124b9158.chunk.js": "/testpageforme.github.io/finance-journal/static/js/2.124b9158.chunk.js",
-    "static/js/2.124b9158.chunk.js.map": "/testpageforme.github.io/finance-journal/static/js/2.124b9158.chunk.js.map",
+    "static/css/2.b90ce945.chunk.css": "/testpageforme.github.io/finance-journal/static/css/2.b90ce945.chunk.css",
+    "static/js/2.96fa375b.chunk.js": "/testpageforme.github.io/finance-journal/static/js/2.96fa375b.chunk.js",
+    "static/js/2.96fa375b.chunk.js.map": "/testpageforme.github.io/finance-journal/static/js/2.96fa375b.chunk.js.map",
     "index.html": "/testpageforme.github.io/finance-journal/index.html",
-    "precache-manifest.128d00b34d8d67dc0378343fb9bbc4e9.js": "/testpageforme.github.io/finance-journal/precache-manifest.128d00b34d8d67dc0378343fb9bbc4e9.js",
+    "precache-manifest.58bea540a78a4360a8022af0aa31e385.js": "/testpageforme.github.io/finance-journal/precache-manifest.58bea540a78a4360a8022af0aa31e385.js",
     "service-worker.js": "/testpageforme.github.io/finance-journal/service-worker.js",
-    "static/css/main.d573aec2.chunk.css.map": "/testpageforme.github.io/finance-journal/static/css/main.d573aec2.chunk.css.map",
-    "static/js/2.124b9158.chunk.js.LICENSE": "/testpageforme.github.io/finance-journal/static/js/2.124b9158.chunk.js.LICENSE"
+    "static/css/2.b90ce945.chunk.css.map": "/testpageforme.github.io/finance-journal/static/css/2.b90ce945.chunk.css.map",
+    "static/css/main.8b7b5224.chunk.css.map": "/testpageforme.github.io/finance-journal/static/css/main.8b7b5224.chunk.css.map",
+    "static/js/2.96fa375b.chunk.js.LICENSE": "/testpageforme.github.io/finance-journal/static/js/2.96fa375b.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.d2fdf836.js",
-    "static/js/2.124b9158.chunk.js",
-    "static/css/main.d573aec2.chunk.css",
-    "static/js/main.ba0e2656.chunk.js"
+    "static/css/2.b90ce945.chunk.css",
+    "static/js/2.96fa375b.chunk.js",
+    "static/css/main.8b7b5224.chunk.css",
+    "static/js/main.699459a3.chunk.js"
   ]
 }
