@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/testpageforme.github.io/finance-journal/precache-manifest.fb09405dd26e802ddf357ab83b1d594a.js"
+  "/testpageforme.github.io/finance-journal/precache-manifest.3f16c0c831f2880335857e8bf67ca1ad.js"
 );
 
 self.addEventListener('message', (event) => {
