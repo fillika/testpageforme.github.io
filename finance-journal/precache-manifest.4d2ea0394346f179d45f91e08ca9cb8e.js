@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "608ed92880d838030ace89cb46dbe3b1",
+    "revision": "49f773a1a860f3b14c78f6dd5cf2daaa",
     "url": "/testpageforme.github.io/finance-journal/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/testpageforme.github.io/finance-journal/static/css/2.b90ce945.chunk.css"
   },
   {
-    "revision": "c251d59d034d572ea2ac",
+    "revision": "e6851b6f9f1c2418e1ca",
     "url": "/testpageforme.github.io/finance-journal/static/css/main.248245fa.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/testpageforme.github.io/finance-journal/static/js/2.1350ab81.chunk.js.LICENSE"
   },
   {
-    "revision": "c251d59d034d572ea2ac",
-    "url": "/testpageforme.github.io/finance-journal/static/js/main.ac2f449b.chunk.js"
+    "revision": "e6851b6f9f1c2418e1ca",
+    "url": "/testpageforme.github.io/finance-journal/static/js/main.c282c4e2.chunk.js"
   },
   {
     "revision": "b927fc402f058bc15c19",
