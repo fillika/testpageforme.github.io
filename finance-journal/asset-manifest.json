@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/testpageforme.github.io/finance-journal/static/css/main.91b35a1f.chunk.css",
-    "main.js": "/testpageforme.github.io/finance-journal/static/js/main.127d3b28.chunk.js",
-    "main.js.map": "/testpageforme.github.io/finance-journal/static/js/main.127d3b28.chunk.js.map",
+    "main.js": "/testpageforme.github.io/finance-journal/static/js/main.75530b77.chunk.js",
+    "main.js.map": "/testpageforme.github.io/finance-journal/static/js/main.75530b77.chunk.js.map",
     "runtime-main.js": "/testpageforme.github.io/finance-journal/static/js/runtime-main.d2fdf836.js",
     "runtime-main.js.map": "/testpageforme.github.io/finance-journal/static/js/runtime-main.d2fdf836.js.map",
     "static/css/2.b90ce945.chunk.css": "/testpageforme.github.io/finance-journal/static/css/2.b90ce945.chunk.css",
     "static/js/2.8f00bf5f.chunk.js": "/testpageforme.github.io/finance-journal/static/js/2.8f00bf5f.chunk.js",
     "static/js/2.8f00bf5f.chunk.js.map": "/testpageforme.github.io/finance-journal/static/js/2.8f00bf5f.chunk.js.map",
     "index.html": "/testpageforme.github.io/finance-journal/index.html",
-    "precache-manifest.ac6c257817c3b6e46655fa57db6c9dae.js": "/testpageforme.github.io/finance-journal/precache-manifest.ac6c257817c3b6e46655fa57db6c9dae.js",
+    "precache-manifest.1b0e36c0b493d33bab102a0ab9376169.js": "/testpageforme.github.io/finance-journal/precache-manifest.1b0e36c0b493d33bab102a0ab9376169.js",
     "service-worker.js": "/testpageforme.github.io/finance-journal/service-worker.js",
     "static/css/2.b90ce945.chunk.css.map": "/testpageforme.github.io/finance-journal/static/css/2.b90ce945.chunk.css.map",
     "static/css/main.91b35a1f.chunk.css.map": "/testpageforme.github.io/finance-journal/static/css/main.91b35a1f.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.b90ce945.chunk.css",
     "static/js/2.8f00bf5f.chunk.js",
     "static/css/main.91b35a1f.chunk.css",
-    "static/js/main.127d3b28.chunk.js"
+    "static/js/main.75530b77.chunk.js"
   ]
 }
