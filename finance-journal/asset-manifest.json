@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/testpageforme.github.io/finance-journal/static/css/main.248245fa.chunk.css",
-    "main.js": "/testpageforme.github.io/finance-journal/static/js/main.c282c4e2.chunk.js",
-    "main.js.map": "/testpageforme.github.io/finance-journal/static/js/main.c282c4e2.chunk.js.map",
-    "runtime-main.js": "/testpageforme.github.io/finance-journal/static/js/runtime-main.d2fdf836.js",
-    "runtime-main.js.map": "/testpageforme.github.io/finance-journal/static/js/runtime-main.d2fdf836.js.map",
-    "static/css/2.b90ce945.chunk.css": "/testpageforme.github.io/finance-journal/static/css/2.b90ce945.chunk.css",
-    "static/js/2.1350ab81.chunk.js": "/testpageforme.github.io/finance-journal/static/js/2.1350ab81.chunk.js",
-    "static/js/2.1350ab81.chunk.js.map": "/testpageforme.github.io/finance-journal/static/js/2.1350ab81.chunk.js.map",
-    "index.html": "/testpageforme.github.io/finance-journal/index.html",
-    "precache-manifest.4d2ea0394346f179d45f91e08ca9cb8e.js": "/testpageforme.github.io/finance-journal/precache-manifest.4d2ea0394346f179d45f91e08ca9cb8e.js",
-    "service-worker.js": "/testpageforme.github.io/finance-journal/service-worker.js",
-    "static/css/2.b90ce945.chunk.css.map": "/testpageforme.github.io/finance-journal/static/css/2.b90ce945.chunk.css.map",
-    "static/css/main.248245fa.chunk.css.map": "/testpageforme.github.io/finance-journal/static/css/main.248245fa.chunk.css.map",
-    "static/js/2.1350ab81.chunk.js.LICENSE": "/testpageforme.github.io/finance-journal/static/js/2.1350ab81.chunk.js.LICENSE"
+    "main.css": "/static/css/main.801d94ad.chunk.css",
+    "main.js": "/static/js/main.cb0e6ce8.chunk.js",
+    "main.js.map": "/static/js/main.cb0e6ce8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.86af43c6.js",
+    "runtime-main.js.map": "/static/js/runtime-main.86af43c6.js.map",
+    "static/css/2.b90ce945.chunk.css": "/static/css/2.b90ce945.chunk.css",
+    "static/js/2.cb534c8c.chunk.js": "/static/js/2.cb534c8c.chunk.js",
+    "static/js/2.cb534c8c.chunk.js.map": "/static/js/2.cb534c8c.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.e17f0e9a29e14d27e3cad870e08e92f6.js": "/precache-manifest.e17f0e9a29e14d27e3cad870e08e92f6.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.b90ce945.chunk.css.map": "/static/css/2.b90ce945.chunk.css.map",
+    "static/css/main.801d94ad.chunk.css.map": "/static/css/main.801d94ad.chunk.css.map",
+    "static/js/2.cb534c8c.chunk.js.LICENSE": "/static/js/2.cb534c8c.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.d2fdf836.js",
+    "static/js/runtime-main.86af43c6.js",
     "static/css/2.b90ce945.chunk.css",
-    "static/js/2.1350ab81.chunk.js",
-    "static/css/main.248245fa.chunk.css",
-    "static/js/main.c282c4e2.chunk.js"
+    "static/js/2.cb534c8c.chunk.js",
+    "static/css/main.801d94ad.chunk.css",
+    "static/js/main.cb0e6ce8.chunk.js"
   ]
 }
