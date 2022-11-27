@@ -1,16 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.23473d0f.css",
-    "main.js": "/static/js/main.0b442622.js",
+    "main.js": "/static/js/main.b46d1591.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
-    "static/media/bordio-logo.svg": "/static/media/bordio-logo.f1eb3476d268be89ee78c3ce03bbc3cf.svg",
     "index.html": "/index.html",
     "main.23473d0f.css.map": "/static/css/main.23473d0f.css.map",
-    "main.0b442622.js.map": "/static/js/main.0b442622.js.map",
+    "main.b46d1591.js.map": "/static/js/main.b46d1591.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.23473d0f.css",
-    "static/js/main.0b442622.js"
+    "static/js/main.b46d1591.js"
   ]
 }
